@@ -30,30 +30,29 @@ public class Main_Test {
 	
 	@Test
 	public void Test_Total_Cost1() {
-		float expectedValue = (float) 111828.64;
-		float actualValue = Main.Total_Cost(12520, 3, 4, 4);
-		System.out.println(actualValue);
+		double expectedValue = (double) 100164.18362699999;
+		double actualValue = Main.Total_Cost(12520, 3);
 		assertTrue(expectedValue == actualValue);
 	}
+	
 	@Test
 	public void Test_Total_Cost2() {
-		float expectedValue = (float) 130823.695;
-		float actualValue = Main.Total_Cost(12520, 3, 4, 8);
-		System.out.println(actualValue);
+		double expectedValue = (double) 999932.1836270001;
+		double actualValue = Main.Total_Cost(124991, 3);;
 		assertTrue(expectedValue == actualValue);
 	}
+	
 	@Test
 	public void Test_Monthly_Payment1() {
-		float expectedValue = (float) 2329.7634;
-		float actualValue = Main.monthly_payment((float)111828.64,(float) 4);
-		System.out.println(actualValue);
+		double expectedValue = (double) 305.13810773333336;
+		double actualValue = Main.monthly_payment(12520, 4, 4);
 		assertTrue(expectedValue == actualValue);
 	}
+	
 	@Test
 	public void Test_Monthly_Payment2() {
-		float expectedValue = (float) 1362.747;
-		float actualValue = Main.monthly_payment((float)130823.70, (float)8);
-		System.out.println(actualValue);
+		double expectedValue = (double) 164.13670145833336;
+		double actualValue = Main.monthly_payment(7000, 3, 4);
 		assertTrue(expectedValue == actualValue);
 	}
 }
